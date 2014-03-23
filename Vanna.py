@@ -92,8 +92,7 @@ while pzl < len(puzzle):  #play the Vanna game for each phrase in puzzle
 			
 
 	# print the mask string in bold            
-	print '\033[1m' + mask  
-	print '\033[0m'
+	print '\033[1m' + mask  + '\033[0m'
 
 
 	# load the mask array
@@ -104,7 +103,7 @@ while pzl < len(puzzle):  #play the Vanna game for each phrase in puzzle
 	# play the game until the mask equals the puzzle
 	while puzzle[pzl] != mask:
    
-		guess=raw_input("guess a letter> ")
+		guess=raw_input("guess a letter (or type exit)> ")
 	
 		# clear the screen
 		print chr(27) + "[2J"
@@ -163,7 +162,7 @@ while pzl < len(puzzle):  #play the Vanna game for each phrase in puzzle
 	
 		#turn bold off and show guesses made, then go back to WHILE to see if puzzle is solved
 		print '\033[0m' + '\n' *2
-		print "Guesses made= ", guesses
+		print "Guess(es) made= ", guesses
 		print
 	#-----------------------------------------------------
 	
@@ -173,9 +172,9 @@ while pzl < len(puzzle):  #play the Vanna game for each phrase in puzzle
 
 	print "Phrase: " + '\033[1m' + mask + '\033[0m'
 	print
-	print "Your Guesses: " + '\033[1m' + guesses + '\033[0m'	
+	print "Your Guess(es): " + '\033[1m' + guesses + '\033[0m'	
 	print '\n' * 2
-	print "You Rock!"
+	print "Thanks for playing, keep an eye out for the cake!"
 	print '\n' * 3
 	
 	if guess=='exit':  #user requested exit
